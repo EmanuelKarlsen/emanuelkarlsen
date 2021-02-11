@@ -1,0 +1,122 @@
+{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background-image: url(Bilder/himmel.jpg);
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #1f2833;
+}
+
+.header h1 {
+  font-size: 50px;
+  color: #66fcf1;
+}
+
+.header p {
+  color: #c5c6c7;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #c5c6c7 ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 100%;
+}
+
+
+
+/* Add a card effect for articles */
+.card {
+  background-color: #1f2833;
+  padding: 20px;
+  margin-top: 20px;
+}
+.card p {
+  color: #c5c6c7;
+}
+
+.card h2{
+  color: #66fcf1;
+}
+
+.card h5 {
+  color: #c5c6c7;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #1f2833;
+  margin-top: 20px;
+  color: #66fcf1;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  color: #c5c6c7;
+}
+ol li {
+  counter-increment: my-awesome-counter;
+}
+ol li::before {
+  content: counter(my-awesome-counter) ". ";
+  color: #66fcf1;
+  font-weight: bold;
+}
